@@ -12,7 +12,7 @@ title: How I Turned Down $300,000 from Microsoft to go Full-Time on GitHub
 almost to the minute, I was sitting alone in a booth at Zeke's Sports Bar and
 Grill on 3rd Street in San Francisco. I wouldn't normally hang out at a sports
 bar, let alone a sports bar in SOMA, but back then Thursday was "I Can Has Ruby"
-night. I guess back then "I can has _______" was also a reasonable moniker to
+night. I guess back then "I can has " was also a reasonable moniker to
 attach to pretty much anything. ICHR was a semi-private meeting of like minded
 Ruby Hackers that generally and willingly devolved into late night drinking
 sessions. Normally these nights would fade away like my hangover the next

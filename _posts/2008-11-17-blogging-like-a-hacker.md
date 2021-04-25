@@ -105,7 +105,7 @@ files are copied over unmodified.
 
 In order to convert your raw site into the finished version, you simply run:
 
-<pre class="terminal"><code>$ jekyll /path/to/raw/site
+<pre><code>$ jekyll /path/to/raw/site
 /path/to/place/generated/site</code></pre>
 
 Jekyll is still a very young project. I've only developed the exact
@@ -122,3 +122,9 @@ Everything is backed up on GitHub. I feel a lightness now when I'm writing a
 post. The system is simple enough that I can keep the entire conversion process
 in my head. The distance from my brain to my blog has shrunk, and, in the end, I
 think that will make me a better author.
+
+<pre><code>
+// require the highlight.js library, including all languages
+const hljs = require('./highlight.js');
+const highlightedCode = hljs.highlightAuto('<span>Hello World!</span>').value
+</code></pre>

@@ -1,0 +1,158 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $dracula-bg;
+    font: 14px 'Open sans', sans-serif;
+    text-align: center;
+    color: $dracula-text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    color: $dracula-fg;
+}
+
+h1 {
+    margin-bottom: 1em;
+    font-size: 1.25em;
+}
+
+p {
+    margin: 1em 0;
+}
+
+a {
+    color: $a-tag-default;
+}
+
+a:hover {
+    color: $a-tag-hover;
+}
+
+a:visited {
+    color: $a-tag-visited;
+}
+
+table {
+    font-size: inherit;
+    font: 100%;
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+
+ul.posts {
+    list-style-type: none;
+    margin-bottom: 2em;
+
+    li {
+        line-height: 1.75em;
+    }
+
+    span {
+        color: $dracula-comment;
+        font-family: 'Inconsolata', monospace;
+    }
+
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+    text-align: justify;
+    width: 34em;
+    margin: 3em auto 2em auto;
+    line-height: 1.5em;
+
+    .title {
+        color: $dracula-fg;
+        font-weight: bold;
+        margin-bottom: 2em;
+        font-size: 1.5em;
+
+
+        a {
+            color: $dracula-fg;
+            text-decoration: none;
+        }
+
+
+        a:hover {
+            color: $dracula-red;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: $dracula-fg;
+            text-decoration: none;
+        }
+    }
+
+
+    .footer {
+        font-size: 80%;
+        color: $dracula-comment;
+        border-top: 2px solid $dracula-comment;
+        margin-top: 2em;
+        overflow: hidden;
+
+        .contact {
+            float: left;
+            margin-right: 3em;
+        }
+
+        .rss {
+            margin-top: 1.1em;
+            margin-right: -.2em;
+            float: right;
+
+            img {
+                border: 0;
+            }
+        }
+    }
+}
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+#post {
+
+    .meta {
+        color: $dracula-comment;
+        font-family: 'Inconsolata', monospace;
+    }
+}
+
+#related {
+    margin-top: 3em;
+
+    h2 {
+        margin-bottom: 1em;
+    }
+}
+
