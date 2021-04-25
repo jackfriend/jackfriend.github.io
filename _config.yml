@@ -1,17 +1,17 @@
 # Where things are
 source              : .
 destination         : ./_site
-collections_dir     : .
+# collections_dir     : ./
 plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
 layouts_dir         : _layouts
 data_dir            : _data
 includes_dir        : _includes
-posts_dir           : _posts
 sass:
-  sass_dir: _sass
+  sass_dir          : _sass
 collections:
-  - posts
-
+  posts:
+    output          : true
+ 
 # Handling Reading
 safe                : false
 include             : [".htaccess"]
@@ -68,4 +68,7 @@ kramdown:
   input             : GFM
   hard_wrap         : false
   footnote_nr       : 1
-  show_warnings     : false
+  show_warnings     : true
+  syntax_highlighter_opts:
+    default_lang    : html
+    css_class       : 'highlight'
