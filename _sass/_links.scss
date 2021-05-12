@@ -1,0 +1,14 @@
+
+a {
+    display: inline-block;
+    padding: 0 0.2rem 0 0.2rem;
+    color: inherit;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-family: $sans;
+    font-variant-caps: small-caps;
+}
+
+a:hover {
+    background-color: $red-secondary;
+}

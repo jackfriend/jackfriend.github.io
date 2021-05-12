@@ -1,3 +1,6 @@
-@import 'syntax';
-@import 'dracula';
-@import 'screen';
+
+@import "vars";
+@import 'typography';
+
+// components
+@import 'links';

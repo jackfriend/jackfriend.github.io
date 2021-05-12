@@ -1,20 +1,6 @@
 ---
 layout: default
-title: Jack Friend 
+title: Jack Friend
 ---
 
-<div id="home">
-  <h1>Blog</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-
-  <!--
-  <h1>Other links of interest (External)</h1>
-  <ul class="posts">
-    <li><span>01 Jan 2021</span> &raquo; <a href="https://www.linkedin.com/in/jack-friend-6305b71a5/">LinkedIn - Jack Friend</a></li>
-  </ul>
-  -->
-</div>
+{{ content }}
