@@ -1,0 +1,23 @@
+
+.note {
+    @extend .caption-secondary;
+
+    @include respond-to(null, 'large') {
+        position: static;
+        margin: auto;
+        display: block;
+        width: 332px;;
+    }
+
+    @include respond-to('large', null) {
+        @include col-width(2);
+        position: absolute;
+        right: 100%;
+    }
+
+    background-color: $accent-light;
+    border: 1px solid $accent-dark;
+    border-right: 4px solid $accent-dark;
+    text-align: right;
+    padding: $gutter;
+}

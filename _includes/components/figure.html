@@ -1,0 +1,16 @@
+<div class="figure figure--{{ include.width }}">
+  <img
+    class="figure__image"
+    src="{{ include.image }}"
+    alt="{{ include.title }}"
+  />
+  {% if include.description %}
+  <div class="figure__caption">
+    <p>
+      <span class="figure__title">Figure 1. {{ include.title }}</span>
+      <span class="figure__description">{{ include.description }}</span>
+      <span class="figure__source">{{ include.source }}</span>
+    </p>
+  </div>
+  {% endif %}
+</div>

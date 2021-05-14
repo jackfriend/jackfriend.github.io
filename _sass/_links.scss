@@ -1,14 +1,44 @@
-
-a {
+.link {
     display: inline-block;
     padding: 0 0.2rem 0 0.2rem;
     color: inherit;
     border-radius: 0.3rem;
-    text-decoration: none;
     font-family: $sans;
     font-variant-caps: small-caps;
+
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: $red-secondary;
+    }
+
 }
 
-a:hover {
-    background-color: $red-secondary;
+.outlink {
+    @extend .link;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: $red-secondary;
+    }
+
+    .feather {
+        width: 1rem;
+        height: 1rem;
+        stroke: $red;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        // display:inline-block;
+    }
+
 }

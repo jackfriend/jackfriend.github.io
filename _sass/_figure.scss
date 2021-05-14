@@ -1,0 +1,50 @@
+.figure {
+    
+    // use Flex to align the figure and figure caption
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+
+    &__image {
+        margin: 0 0 0 0;
+        width: 100%;
+        height: auto;
+    }
+
+    &__caption {
+        margin: 0 0 0 0;
+        padding: $gutter;
+        background-color: $accent-light; 
+        border: 1px solid $accent-dark;
+
+        p { margin: 0 0 0 0; }
+    }
+
+    &__title { @extend .caption-primary; font-weight: $bold }
+    &__description { @extend .caption-primary }
+    &__source { @extend .caption-secondary }
+
+    @include respond-to(null, 'medium') {
+        width: 342px;
+        margin: auto;
+    }
+
+}
+
+@include respond-to('large', null) {
+    .figure--one { @include col-width(1); margin: 0 0 0 0; }
+    .figure--two { @include col-width(2); margin: 0 0 0 0; }
+    .figure--three { @include col-width(3); margin: 0 0 0 0; }
+    .figure--four { @include col-width(4); margin: 0 0 0 0; }
+    .figure--five { @include col-width(5); margin: 0 0 0 0; }
+    .figure--six { @include col-width(6); margin: 0 0 0 0; }
+    .figure--seven { @include col-width(7); margin: 0 0 0 0; }
+    .figure--eight { @include col-width(8); margin: 0 0 0 0; }
+    .figure--nine { @include col-width(9); margin: 0 0 0 0; }
+    .figure--ten { @include col-width(10); margin: 0 0 0 0; }
+    .figure--eleven { @include col-width(11); margin: 0 0 0 0; }
+    .figure--twelve { @include col-width(12); margin: 0 0 0 0; }
+}
+
+

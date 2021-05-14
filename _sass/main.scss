@@ -1,6 +1,13 @@
-
+// universal imports
 @import "vars";
+@import 'grid';
 @import 'typography';
+
+// parts
+@import 'base';
+@import 'article';
 
 // components
 @import 'links';
+@import 'note';
+@import 'figure';

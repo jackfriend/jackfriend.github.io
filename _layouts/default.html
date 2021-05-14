@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-   <title>{{ page.title }}</title>
-   <meta name="author" content="Jack Friend" />
-   <link rel="canonical" href="https://www.jackfriend.com"/>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }}</title>
+    <meta name="author" content="Jack Friend" />
+    <link rel="canonical" href="https://www.jackfriend.com" />
 
-   <!-- syntax highlighting CSS -->
-   <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="site">
+      <div class="nav">
+        <div class="title">
+          <a href="/">Jack Friend</a>
+        </div>
+        <div class="extra">
+          <a href="/about.html">about</a>
+        </div>
+      </div>
+
+      {{ content }}
+
+      <div class="footer">
+        <div class="contact">
+          <p>
+            Jack Friend
+            <br />
+            friend@jackfriend.com
+          </p>
+        </div>
+        <div class="contact">
+          <p>
+            <a href="http://github.com/jackfriend/">github.com/jackfriend</a
+            ><br />
+          </p>
+        </div>
+        <div class="disclaimer">
+          <p>
+            Content is <span>&#169;</span>2021. Website adapted from
+            <a href="http://github.com/mojombo/jekyll">github.com/mojombo/</a>
+            and Dracula Theme under the MIT License
+          </p>
+        </div>
+      </div>
+    </div>
 
     <script>
-
+      feather.replace();
     </script>
-
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
-</head>
-<body>
-
-
-<div class="site">
-  <div class="nav">
-    <div class="title">
-        <a href="/">Jack Friend</a>
-    </div>
-    <div class="extra">
-        <a href="/about.html">about</a>
-    </div>
-  </div>
-
-  {{ content }}
-
-  <div class="footer">
-    <div class="contact">
-      <p>
-        Jack Friend
-        <br />
-        friend@jackfriend.com
-      </p>
-    </div>
-    <div class="contact">
-      <p>
-        <a href="http://github.com/jackfriend/">github.com/jackfriend</a><br />
-      </p>
-    </div>
-    <div class="disclaimer">
-      <p>Content is <span>&#169;</span>2021. Website adapted from <a href="http://github.com/mojombo/jekyll">github.com/mojombo/</a> and Dracula Theme under the MIT License</p>
-    </div>
-  </div>
-</div>
-
-
-</body>
+  </body>
 </html>
