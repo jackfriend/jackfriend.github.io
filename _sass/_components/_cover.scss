@@ -1,0 +1,21 @@
+.cover {
+
+    @include respond-to('large', null) {
+        @include col-width(8);
+    }
+
+    @include respond-to('mobile', 'large') {
+        margin: auto;
+        width: 100%;
+    }
+
+    @include respond-to(null, 'mobile') {
+        position: relative;
+        left: -2 * $mobile-gutter;
+        margin: auto;
+        width: calc(100% + #{4 * $mobile-gutter});
+    }
+
+    &__image { width: 100%; margin: 0 0 0 0; }
+
+}

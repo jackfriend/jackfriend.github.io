@@ -1,26 +1,25 @@
-article { background-color: pink; } 
-
-
 .note {
     @extend .caption-secondary;
 
-    @include respond-to(null, 'large') {
+    @include respond-to(null, 'medium') {
         position: relative;
         left: -1 * $gutter;
         display: block;
         width: 100%;
+        text-align: left;
     }
 
-    @include respond-to('large', null) {
+    @include respond-to('medium', null) {
         @include col-width(2);
         position: absolute;
         right: calc(100% + #{$gutter});
+        text-align: right;
     }
+
 
     background-color: $accent-light;
     border: 1px solid $accent-dark;
     border-right: 4px solid $accent-dark;
-    text-align: right;
     padding: $gutter;
 
 }

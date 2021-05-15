@@ -2,8 +2,37 @@
 layout: default
 ---
 
-<header></header>
 <main>
+  <header>
+    <p>
+      <span class="subtitle-primary">{{ page.author }}</span>
+      <span class="subtitle-secondary">{{ page.date | date: '%m.%d.%Y'}}</span>
+    </p>
+    <h1 class="article__title">{{ page.title }}</h1>
+    {% include components/cover.html image = page.image %}
+  </header>
   <article>{{ content }}</article>
+  <footer>
+    {% if page.previous.url %}
+    <div class="footer__previous">
+      <a href="{{ page.previous.url }}">
+        <i data-feather="arrow-left-circle"></i>
+        <span class="footer__button">Previous</span>
+        <span class="footer__date"
+          >{{ page.previous.date | date: '%m.%d.%Y' }}</span
+        >
+      </a>
+    </div>
+    {% endif %} {% if page.next.url %}
+    <div class="footer__next">
+      <a href="{{ page.next.url }}">
+        <span class="footer__date"
+          >{{ page.next.date | date: '%m.%d.%Y' }}</span
+        >
+        <span class="footer__button">Next</span>
+        <i data-feather="arrow-right-circle"></i>
+      </a>
+    </div>
+    {% endif %}
+  </footer>
 </main>
-<footer></footer>

@@ -10,6 +10,7 @@
 @import '_components/links';
 @import '_components/note';
 @import '_components/toc';
+@import '_components/cover';
 
 // import base styles
 @import '_base/typography';
@@ -17,4 +18,5 @@
 
 // import layouts
 @import '_layout/article';
+@import '_layout/footer';
 
