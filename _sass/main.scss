@@ -1,13 +1,20 @@
-// universal imports
-@import "vars";
-@import 'grid';
-@import 'typography';
+@charset 'utf-8';
 
-// parts
-@import 'base';
-@import 'article';
+// import utils and vendors
+@import '_util/normalize';
+@import '_util/vars';
+@import '_util/grid';
 
-// components
-@import 'links';
-@import 'note';
-@import 'figure';
+// import components
+@import '_components/figure';
+@import '_components/links';
+@import '_components/note';
+@import '_components/toc';
+
+// import base styles
+@import '_base/typography';
+@import '_base/base';
+
+// import layouts
+@import '_layout/article';
+

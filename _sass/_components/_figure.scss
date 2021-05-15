@@ -1,0 +1,73 @@
+.figure {
+    
+    // use Flex to align the figure and figure caption
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 0 0 0;
+
+    @include respond-to(null, 'large') {
+        position: relative;
+        left: -1 * $gutter;
+        margin: auto;
+        width: calc(100% + #{2 * $gutter});
+    }
+
+    &__image {
+        margin: 0 0 0 0;
+        width: 100%;
+        height: auto;
+    }
+
+    &__caption {
+        margin: 0 0 0 0;
+        padding: $gutter;
+        background-color: $accent-light; 
+        border: 1px solid $accent-dark;
+
+        p { margin: 0 0 0 0; }
+    }
+
+    &__title { @extend .caption-primary; font-weight: 500 }
+    &__description { @extend .caption-primary }
+    &__source { @extend .caption-secondary }
+
+}
+
+@include respond-to('large', null) {
+    .figure--one { @include col-width(1); margin: 0 0 0 0; }
+    .figure--two { @include col-width(2); margin: 0 0 0 0; }
+    .figure--three { @include col-width(3); margin: 0 0 0 0; }
+    .figure--four { @include col-width(4); margin: 0 0 0 0;  }
+    .figure--five { @include col-width(5); margin: 0 0 0 0; }
+    .figure--six { @include col-width(6); margin: 0 0 0 0;
+        position: relative;
+        right: ($column + $gutter) 
+    }
+    .figure--seven { @include col-width(7); margin: 0 0 0 0;
+        position: relative;
+        right: (2 * $column + 2 * $gutter) 
+    }
+    .figure--eight { @include col-width(8); margin: 0 0 0 0;
+        position: relative;
+        right: (3 * $column + 3 * $gutter) 
+    }
+    .figure--nine { @include col-width(9); margin: 0 0 0 0;
+        position: relative;
+        right: (4 * $column + 4 * $gutter) 
+    }
+    .figure--ten { @include col-width(10); margin: 0 0 0 0;
+        position: relative;
+        right: (5 * $column + 5 * $gutter) 
+    }
+    .figure--eleven { @include col-width(11); margin: 0 0 0 0;
+        position: relative;
+        right: (6 * $column + 6 * $gutter) 
+    }
+    .figure--twelve { @include col-width(12); margin: 0 0 0 0;
+        position: relative;
+        right: (8 * $column + 8 * $gutter) 
+    }
+}
+
+

@@ -10,7 +10,8 @@ author: Jack Friend
     width="eight"
     %}
 
-* A markdown unordered list which will be replaced with the ToC
+
+1. A markdown ordered list which will be replaced with the ToC
 {:toc}
 
 ### Introduction

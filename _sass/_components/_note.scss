@@ -1,18 +1,20 @@
+article { background-color: pink; } 
+
 
 .note {
     @extend .caption-secondary;
 
     @include respond-to(null, 'large') {
-        position: static;
-        margin: auto;
+        position: relative;
+        left: -1 * $gutter;
         display: block;
-        width: 332px;;
+        width: 100%;
     }
 
     @include respond-to('large', null) {
         @include col-width(2);
         position: absolute;
-        right: 100%;
+        right: calc(100% + #{$gutter});
     }
 
     background-color: $accent-light;
@@ -20,4 +22,5 @@
     border-right: 4px solid $accent-dark;
     text-align: right;
     padding: $gutter;
+
 }

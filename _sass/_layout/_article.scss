@@ -1,0 +1,25 @@
+
+main {
+    @include container(8);
+    @include pull-flex-children-right;
+}
+
+article {
+    // position: relative;
+
+    @include respond-to(null, 'small') {
+        @include col-width(4);
+    }
+    @include respond-to('small', 'medium') {
+        @include col-width(8);
+        // position: relative;
+    }
+    @include respond-to('medium', 'large') {
+        @include col-width(8);
+        // position: relative;
+    }
+    @include respond-to('large', null) {
+        @include col-width(5);
+        position: relative;
+    }
+}

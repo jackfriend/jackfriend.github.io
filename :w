@@ -1,0 +1,88 @@
+
+$breakpoints: (
+  'mobile': 480px,
+  'small':  768px,
+  'medium': 1024px,
+  'large':  1200px,
+);
+
+@mixin respond-to($breakpointsmall, $breakpointbig) {
+
+  @if ($breakpointsmall and $breakpointbig) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpointsmall) + 1px) and (max-width: map-get($breakpoints, $breakpointbig)) {
+          @content;
+      }
+  } @else if ($breakpointsmall) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpointsmall) + 1px) {
+          @content;
+      }
+  } @else if ($breakpointbig) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpointbig)) {
+      @content;
+    }
+  } @else {
+    @error "DID NOT WORK.";
+  }
+}
+
+
+$column: 122px;
+$gutter: 16px; 
+
+$mobile-column: 66px;
+$mobile-gutter: 10px; 
+
+@mixin container($i) {
+   // display: flex;
+   padding: 0 0 0 0;
+
+   @include respond-to('large', null) {
+       width: ($i * $column) + ($i * $gutter) + $gutter; 
+       display: flex;
+       margin: 0 auto;
+   }
+   @include respond-to ('medium', 'large') {
+        width: ($i * $column * 0.7) + ($i * $gutter) + $gutter;
+        display: flex;
+        margin: 0 auto;
+   }
+   @include respond-to ('small', 'medium') {
+        width: 768px;
+        width: ($i * $column * 0.5) + ($i * $gutter) + $gutter;
+        display: flex;
+        margin: 0 auto;
+   }
+   @include respond-to('mobile', 'small') {
+       display: flex;
+       // max-width: ($i * $column * 0.5) + ($i * $gutter) + $gutter; 
+       width: calc(80% + #{$mobile-gutter * 5});
+       margin: 0 auto;
+   }
+   @include respond-to(null, 'mobile') {
+       display: flex;
+       width: calc(80% + #{$mobile-gutter * 5});
+       margin: 0 auto;
+
+   }
+
+}
+
+@mixin col-width($i) {
+    
+   @include respond-to('large', null) {
+        width: ($i * $column) + ($i * $gutter) + $gutter;
+        margin: 0 ($gutter / 2) 0 ($gutter / 2);
+   }
+   @include respond-to('mobile', 'large') {
+        width: ($i * $column / 2) + ($i * $gutter) + $gutter;
+        margin: 0 ($gutter / 2) 0 ($gutter / 2);
+   }
+   @include respond-to(null, 'mobile') {
+        width: 20%;
+        margin: 0 ($gutter / 2);
+   }
+
+}

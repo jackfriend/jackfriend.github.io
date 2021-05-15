@@ -65,10 +65,11 @@ kramdown:
   entity_output     : as_char
   toc_levels        : [1, 2, 3, 4, 5, 6]
   smart_quotes      : lsquo,rsquo,ldquo,rdquo
-  input             : GFM
+  input             : kramdown
   hard_wrap         : false
   footnote_nr       : 1
   show_warnings     : true
   syntax_highlighter_opts:
     default_lang    : html
     css_class       : 'highlight'
+
