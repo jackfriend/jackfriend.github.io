@@ -4,6 +4,7 @@ footer {
     border-top: 1px solid $primary-dark;
     display: flex;
     justify-content: space-between;
+    padding: 0 0 2em 0;
 
     @include respond-to(null, 'small') {
         @include col-width(4);

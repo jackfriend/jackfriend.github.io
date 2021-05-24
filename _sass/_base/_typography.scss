@@ -5,9 +5,8 @@ $normal: 400;
 $semibold: 500;
 $bold: 700;
 
-html { font-size: 16px; }
-
-body {
+html, body {
+  font-size: 16px;
   font-family: $serif;
   font-weight: $normal;
   color: $primary-dark;
@@ -18,15 +17,15 @@ body {
 h1, h2, h3, h4, h5, h6 { overflow-wrap: normal; overflow: hidden; }
 
 
-h1 { font-family: $sans; font-weight: $bold; font-size: 6rem; color: $primary-dark; margin: 0 0 4rem 0; line-height: 1; }
-h2 { font-family: $sans; font-weight: $normal; font-size: 5rem; color: $primary-dark; margin: 0 0 2rem 0; line-height: 1.25; }
+h1 { font-family: $sans; font-weight: $bold; font-size: 4rem; color: $primary-dark; margin: 0 0 4rem 0; line-height: 1; }
+h2 { font-family: $sans; font-weight: $normal; font-size: 3rem; color: $primary-dark; margin: 0 0 2rem 0; line-height: 1.25; }
 h3 {
-    font-family: $serif; font-weight: $bold; font-style: italic; font-size: 3rem; color: $primary-dark; margin: 0 0 2rem 0; line-height: 1.5; max-wudth: 100%;
+    font-family: $serif; font-weight: $bold; font-style: italic; font-size: 2.5rem; color: $primary-dark; margin: 0 0 2rem 0; line-height: 1.5; max-width: 100%;
     &:before { content: "#"; color: $accent-dark;
     @include respond-to('medium', null) {position: absolute; margin: 0 0 0 -1em;}
     @include respond-to('small', 'medium') {} }
 }
-h4 { font-family: $sans; font-weight: $normal; font-size: 2.25rem; color: $primary-dark; margin: 0 0 2rem 0; line-height: 1.5; }
+h4 { font-family: $sans; font-weight: $normal; font-size: 2rem; color: $primary-dark; margin: 0 0 2rem 0; line-height: 1.25; }
 h5 { font-family: $sans; font-weight: $normal; font-size: 1.5rem; color: $secondary-dark; margin: 0 0 2rem 0; line-height: 1.5; }
 h6 { font-family: $sans; font-weight: $normal; font-style: italic; font-size: 1.25rem; color: $secondary-dark; margin: 0 0 2rem 0; line-height: 1.5; }
 p { font-family: $serif; font-weight: $normal; font-size: 1rem; color: $primary-dark; margin: 1em 0 1rem 0; line-height: 1.5; }

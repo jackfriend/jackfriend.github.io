@@ -1,4 +1,9 @@
 .note {
+    background-color: $accent-light;
+    border: 1px solid $accent-dark;
+    border-right: 4px solid $accent-dark;
+    padding: $gutter;
+
     @extend .caption-secondary;
 
     @include respond-to(null, 'medium') {
@@ -15,11 +20,4 @@
         right: calc(100% + #{$gutter});
         text-align: right;
     }
-
-
-    background-color: $accent-light;
-    border: 1px solid $accent-dark;
-    border-right: 4px solid $accent-dark;
-    padding: $gutter;
-
 }
