@@ -3,14 +3,40 @@ layout: default
 title: Jack Friend
 ---
 
-<ul class="gridded">
-  <li class="gridded"></li>
-</ul>
+<main>
+  <div class="home">
+    <h1>Jack Friend</h1>
 
-<ul>
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
+    <h4>Preface</h4>
+    <p>
+      Here you will things that interest me, such as science and business
+      relevant to me.
+    </p>
+
+    <h4>Contents</h4>
+    <ul class="posts">
+      {% for post in site.posts %}
+      <li>
+        <span class="date"
+          >{{ post.date | date_to_string }} <i data-feather="chevrons-right"></i
+        ></span>
+        <span><a href="{{ post.url }}">{{ post.title }}</a></span>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h4>Appendix</h4>
+    <ul class="posts">
+      <li>
+        <span><a href="/link">Mission statement</a></span>
+        <i data-feather="chevrons-left"></i>
+        <span class="date">Internal html</span>
+      </li>
+      <li>
+        <span><a href="/link">Curriculum vitae</a></span>
+        <i data-feather="chevrons-left"></i>
+        <span class="date">PDF document<i data-feather="file-text"></i></span>
+      </li>
+    </ul>
+  </div>
+</main>

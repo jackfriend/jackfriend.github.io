@@ -1,0 +1,19 @@
+.home {
+ 
+     @include respond-to(null, 'small') {
+         @include col-width(4);
+         position: static;
+     }
+     @include respond-to('small', 'medium') {
+         @include col-width(8);
+         position: static;
+     }
+     @include respond-to('medium', 'large') {
+         @include col-width(5);
+         position: relative;
+     }
+     @include respond-to('large', null) {
+         @include col-width(5);
+         position: relative;
+     }
+ }
